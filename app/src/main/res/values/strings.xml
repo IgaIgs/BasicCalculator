@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">BasicCalculator</string>
+    <string name="textview">Calculation</string>
+    <string name="textview1">Numbers</string>
+    <string name="button">%</string>
+    <string name="button22">7</string>
+    <string name="button23">4</string>
+    <string name="button24">1</string>
+    <string name="button25">.</string>
+    <string name="button29">8</string>
+    <string name="button30">+/-</string>
+    <string name="button52">=</string>
+    <string name="button55">9</string>
+    <string name="button54">6</string>
+    <string name="button53">3</string>
+    <string name="button51">CE</string>
+    <string name="button26">0</string>
+    <string name="button28">5</string>
+    <string name="button27">2</string>
+    <string name="button62">-</string>
+    <string name="button65">+</string>
+    <string name="button64">/</string>
+    <string name="button63">*</string>
+    <string name="button61"><![CDATA[<=]]></string>
+</resources>
