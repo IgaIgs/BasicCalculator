@@ -20,7 +20,7 @@
     <string name="bminus">-</string>
     <string name="bplus">+</string>
     <string name="bdvde">/</string>
-    <string name="bmltply">x</string>
+    <string name="bmltply">*</string>
     <string name="bbckspce"><![CDATA[<=]]></string>
     <string name="twostrings">%s%s</string>
     <string name="threestrings">%s%s%s</string>
