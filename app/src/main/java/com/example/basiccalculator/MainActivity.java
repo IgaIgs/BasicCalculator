@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     double firstNo, secondNo;
     // string to contain the current operator
     String op;
+    boolean result;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,12 +80,15 @@ public class MainActivity extends AppCompatActivity {
                 // access the calculator functionality from the CalculatorClass class
                 double output = CalculatorClass.calculations(firstNo,secondNo,op);
                 Num.setText(""+ output);
+                result = true;
                 break;
             default:
-               /* String s = ((String) Calc.getText()).substring(0,(l1-1)); // get the last character from the upper screen*/
+                /* String s = ((String) Calc.getText()).substring(0,(l1-1)); // get the last character from the upper screen*/
                 // if the previous character was a '0' or
                 // an operator show only the currently chosen value on the lower screen
-                if (Num.getText().equals("0") || Arrays.asList(ops).contains(Num.getText())){ Num.setText(com);}
+                if (Num.getText().equals("0") || Arrays.asList(ops).contains(Num.getText()) || result){
+                    Num.setText(com);
+                    result = false;}
                 // if the previous character was an operand, continue typing values as usual
                 else { Num.setText(Num.getText() + com);}
                 break;
