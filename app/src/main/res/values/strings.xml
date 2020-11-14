@@ -22,4 +22,10 @@
     <string name="bdvde">/</string>
     <string name="bmltply">*</string>
     <string name="bbckspce"><![CDATA[<=]]></string>
+    <string name="twostrings">%s%s</string>
+    <string name="threestrings">%s%s%s</string>
+    <string name="stringndouble">%s%.2f</string>
+    <string name="stringninteger">%s%d</string>
+    <string name="threestringsndouble">%s%s%.2f%s</string>
+    <string name="threestringsninteger">%s%s%d%s</string>
 </resources>
