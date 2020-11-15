@@ -5,16 +5,16 @@ public class CalculatorClass {
     public static double calculations(double n, double m, String operator){
         double result = 0;
         switch (operator){
-            case "/":
+            case "÷":
                 result = n / m;
                 break;
-            case "*":
+            case "×":
                 result = n * m;
                 break;
             case "+":
                 result = n + m;
                 break;
-            case "-":
+            case "–":
                 result = n - m;
                 break;
             case "%":

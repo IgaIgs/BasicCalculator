@@ -9,8 +9,6 @@ import android.widget.TextView;
 
 import com.example.basiccalculator.databinding.ActivityMainBinding;
 
-import java.util.Arrays;
-
 public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
 
@@ -20,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     private String op;
     private boolean result;
     private boolean multiop;
+    private boolean wasAnOp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,9 +28,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClick(View v) {
-
-        // array with all the operators comes in handy later when checking the screen contents
-        String[] ops = {"+", "-", "/", "%", "*"};
 
         TextView Calc = binding.CalculationView;
         TextView Num = binding.NumbersView;
@@ -76,9 +72,10 @@ public class MainActivity extends AppCompatActivity {
                 // continue showing everything on the upper screen // show what's currently on lower screen on the upper
                 Calc.setText(getString(R.string.twostrings, Num.getText(), com));
             }
-            // update the lower screen to show the button pressed
-            Num.setText(com);
+            /*// update the lower screen to show the button pressed
+            Num.setText(com);*/
             multiop = true;
+            wasAnOp = true;
         } else if (id == R.id.bequal) {
             if (result){ //if this is the case when the user repeats the same operation by pressing "=" multiple times
                 //show the new/continuing calculation on upper screen
@@ -111,12 +108,13 @@ public class MainActivity extends AppCompatActivity {
 
             result = true;
             multiop = false;
-        } else {/* String s = ((String) Calc.getText()).substring(0,(l1-1)); // get the last character from the upper screen*/
-            // if the previous character was a '0' or "=" or
-            // an operator show only the currently chosen value on the lower screen
-            if (Num.getText().equals("0") || Arrays.asList(ops).contains((String) Num.getText()) || result) {
+        } else {
+            // if the previous character was a '0' or
+            // an operator or "=" show only the currently chosen value on the lower screen
+            if (Num.getText().equals("0") || wasAnOp || result) {
                 Num.setText(com);
                 result = false;
+                wasAnOp = false;
             }
             // if the previous character was an operand, continue typing values as usual
             else {
