@@ -1,6 +1,6 @@
 # BasicCalculator 
 
-#### This is a basic calculator app for Android written in Java.
+#### A basic calculator app for Android written in Java.
 
 It's my very first Android project and its main goal was to familiarize myself with Android Studio and learn basics of Android developement.
 Contains no ads or unnecessary permissions. 
@@ -10,7 +10,9 @@ It has a very basic UI with pastel colours.
 
 <img src="https://github.com/IgaIgs/BasicCalculator/blob/master/AppScreenCapture/Screenshot_20201115-211404_BasicCalculator.jpg" alt="alt text" width="324" height="684">
 
-The icon is adaptive so will change accordingly to the user's settings. ![](https://github.com/IgaIgs/BasicCalculator/blob/master/AppScreenCapture/Screenshot_20201116-203842_Settings%20(5).jpg)
+The icon is adaptive so will change accordingly to the user's settings. 
+
+![](https://github.com/IgaIgs/BasicCalculator/blob/master/AppScreenCapture/Screenshot_20201116-203842_Settings%20(5).jpg)
 
 It can be downloaded from the Play Store:
 
