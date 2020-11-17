@@ -22,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
     private boolean multiop;
     // indicate whether an operator was pressed to hide it from the lower screen
     private boolean wasAnOp;
+    // block result button
+    private boolean blockEqual;
 
     /**
      * Display the layout of the app on start
@@ -31,11 +33,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
-
+        blockEqual = true;
     }
 
     /**
-     * The beaviour of the app. Depending on the button (view) being pressed by the user,
+     * The behaviour of the app. Depending on the button (view) being pressed by the user,
      * certain tasks are performed by the app and content being displayed on the two screens.
      * @param v - the view clicked by the user
      */
@@ -45,8 +47,7 @@ public class MainActivity extends AppCompatActivity {
         TextView Calc = binding.CalculationView;
         TextView Num = binding.NumbersView;
 
-        // get the length of the current text being displayed on both screens
-        int l1 = binding.CalculationView.getText().length();
+        // get the length of the current text being displayed on lower screen
         int l2 = binding.NumbersView.getText().length();
 
         //get the text of the pressed button
@@ -62,6 +63,11 @@ public class MainActivity extends AppCompatActivity {
             // delete everything on both screens when CE pressed
             Calc.setText("");
             Num.setText("");
+            // reset data
+            firstNo = 0;
+            secondNo = 0;
+            op = null;
+            blockEqual = true;
 
         } else if (id == R.id.bplusminus) { // show the negative value of chosen number on lower screen
 
@@ -70,12 +76,11 @@ public class MainActivity extends AppCompatActivity {
             }
 
         } else if (id == R.id.bbckspce) {
-            if (l2 == 0) {  // if nothing on screen - break to avoid out of bounds exception
+            if (l2 == 0 || wasAnOp || result) {  // if nothing on screen - break to avoid out of bounds exception
                 return;
             }
-            // delete last character of the strings displayed on both screens
+            // delete last character of the strings displayed on the lower screen
             Num.setText(((String) Num.getText()).substring(0, (l2 - 1)));
-            Calc.setText(((String) Calc.getText()).substring(0, (l1 - 1)));
 
         } else if (id == R.id.bplus || id == R.id.bminus || id == R.id.bdvde || id == R.id.bpercent
                 || id == R.id.bmltply) {
@@ -100,9 +105,12 @@ public class MainActivity extends AppCompatActivity {
             // update the boolean trackers
             multiop = true; // might be a multi calculation
             wasAnOp = true; // an operator was just pressed
+            blockEqual = false; //enable the result button
         } else if (id == R.id.bequal) {
-
-            if (result){
+            if (blockEqual){
+                return;
+            }
+            else if (result){
                 // if a result has already been obtained, so it's this case when the user repeats
                 // the same operation by pressing "=" multiple times
                 // show the new/continuing calculation on upper screen

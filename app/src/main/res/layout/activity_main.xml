@@ -29,6 +29,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_chainStyle="spread_inside" />
 
+
         <TextView
             android:id="@+id/NumbersView"
             android:layout_width="0dp"
@@ -40,7 +41,7 @@
             android:layout_marginRight="16dp"
             android:text="@string/b0"
             android:textAppearance="@style/TextAppearance.AppCompat.Display3"
-            android:textColor="@color/black"
+            android:textColor="?attr/colorOnSecondary"
             app:layout_constraintBottom_toTopOf="@+id/bpercent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHeight_min="80dp"
