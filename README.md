@@ -6,11 +6,11 @@ It's my very first Android project and its main goal was to familiarize myself w
 Contains no ads or unnecessary permissions. 
 
 ## Interface
-It has a very basic UI with pastel colours. 
+It has a very basic UI with pastel colours and a pleasant dark theme.
 
-<img src="https://github.com/IgaIgs/BasicCalculator/blob/master/AppScreenCapture/Screenshot_20201115-211404_BasicCalculator.jpg" alt="alt text" width="324" height="684">
+<img src="https://github.com/IgaIgs/BasicCalculator/blob/master/AppScreenCapture/Screenshot_20201115-211404_BasicCalculator.jpg" alt="alt text" width="324" height="684">  <img src="https://github.com/IgaIgs/BasicCalculator/blob/master/AppScreenCapture/Screenshot_20201117-114234_BasicCalculatorDark.jpg" alt="alt text" width="324" height="684">
 
-The icon is adaptive so will change accordingly to the user's settings. 
+The icon is adaptive so will change accordingly to the user's settings. Here an example of the 'squircle' shape:
 
 ![](https://github.com/IgaIgs/BasicCalculator/blob/master/AppScreenCapture/Screenshot_20201116-203842_Settings%20(5).jpg)
 
