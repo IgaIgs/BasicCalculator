@@ -80,4 +80,4 @@ Since it is just a small project, the app has not yet been released to the Googl
 
 ## Developement info
 * Programming language: Java
-* IDE: Android Studio (version)
+* IDE: Android Studio (version 4.1.1 for Windows 64-bit (896 MB))
